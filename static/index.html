@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+	<link rel="stylesheet" href="additional-css.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta charset="utf-8">
+	<title>Impressive: Your Timetable, Simplified</title>
+</head>
+<body>
+	<main>
+		<img src="logo.png">
+		<h2>Your timetable, simplified</h2>
+		<p class="flow-text">UCC's Publish service is great. But Impressive gets you an iCal file that you can import on iOS, OSX or Google Calendar. Once you've set up your own timetable, log in here to continue.</p>
+		<form action="/getcalendar" method="POST">
+			<input id="email" placeholder="Your UCC Email" name="email" type="email">
+			<input id="password" name="password" placeholder="Password" type="Password">
+			<input id="Submit" name="Submit" type="Submit" class="button-primary">
+			<div class="warning" style="display:none"><strong>Try again - it seems your details were incorrect</strong></div>
+		</form>
+		<div class="working" style="display:none"><object data="gears.svg" type="image/svg+xml"></object></div>
+		<div class="success" style="display:none">
+			<a id="dl" download="my_calendar.ics" class="button button-primary">Download</a> 
+			<a id="cal" class="button button-secondary">Add to Calendar</a>
+		</div>
+	</main>
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+	<script src="app.js"></script>
+</body>
+</html>
