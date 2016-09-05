@@ -4,10 +4,9 @@ function handleResponse(data){
 	if(data.ok){
 		$("#dl").attr("href", data.url);
 		var link = data.url;
+		link = link.replace("http://", "webcal://")
 		if(navigator.platform.toUpperCase().indexOf('LINUX')>=0 || navigator.platform.toUpperCase().indexOf('WIN')>=0){
 			link = "https://www.google.com/calendar/render?cid=" + link;
-		} else {
-			link = link.replace("http://", "webcal://")
 		}
 		$("#cal").attr('href', link);
 		$(".success").slideDown();
